@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main()
+{
+    int x;
+    printf("enter array size: ");
+    scanf("%d",&x);
+    int arr[x];
+    printf("\nenter array number: \n");
+    for(int i=0;i<x;i++){
+        scanf("%d",&arr[i]);
+    }
+    printf("array element: \n");
+    for(int i=0;i<x;i++){
+        printf(" %d",arr[i]);
+    }
+    int item ;
+    printf("\nenter searching element: ");
+    scanf("%d",&item);
+
+   int found = 0,j;
+   for(j=0;j<x;j++){
+    if(arr[j]==item){
+        found = 1;
+        break;
+    }
+   }
+   if(found == 1){
+        printf("\nitem position in array is %d\n",j+1);
+   }
+   else{
+    printf("\nitem is not in the array\n");
+   }
+
+}
